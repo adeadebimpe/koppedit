@@ -17,6 +17,9 @@ const Header = () => {
 		allContentfulHeader {
 		  edges {
 			node {
+				heading {
+					heading
+				  }
 			  subHeading
 			  url
 			}
@@ -25,23 +28,18 @@ const Header = () => {
 	  }
 	  `)
 
-	console.log(data.edges[0].node);
+	const { heading, subHeading, url } = data.allContentfulHeader.edges[0].node;
+
 	return (
 		<header className="header">
 			<div className="container">
 				<div className="header__content">
 					<Row>
 						<Col>
-							<h1>
-								Buy and sell your <span>premium used gadgets</span> at the best prices
-                   			</h1>
-							<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-							{/* <div className="download">
-								<img src={googlebadge} alt="Google Playstore" />
-								<img src={applebadge} alt="Apple Playstore" />
-							</div> */}
+							<ReactMarkdown source={heading.heading} escapeHtml={false} />
+							<p>{subHeading}</p>
 							<div className="download">
-								<button className="btn btn-primary">Become a beta tester</button>
+								<a href={url}><button className="btn btn-primary">Become a beta tester</button></a>
 							</div>
 						</Col>
 						<Col>

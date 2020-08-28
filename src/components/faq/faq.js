@@ -1,26 +1,37 @@
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Section from '../section';
 
 import FaqItem from './faqitem'
 
+
 const FAQ = () => {
-    const [faqs, setfaqs] = useState([
-        {
-            "question": "What is your name?",
-            "answer": "Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.",
-            "open": false
-        },
-        {
-            "question": "What is your name?",
-            "answer": "Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.",
-            "open": false
-        },
-        {
-            "question": "What is your name?",
-            "answer": "Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.Koppedit is the simplest and least technical way to buy and sell your premium used Gadgets.",
-            "open": false
+    const data = useStaticQuery(graphql`
+        query {
+            allContentfulFaqItem {
+            edges {
+                node {
+                id
+                answer {
+                    answer
+                }
+                question
+                }
+            }
+            }
         }
-    ])
+      
+    `);
+
+    const [faqs, setfaqs] = useState(data.allContentfulFaqItem.edges);
+
+    var result = faqs.map(function(el) {
+        var o = Object.assign({}, el);
+        o.open = false;
+        return o;
+     })
+
+     console.log(result);
 
     const toggleFaq = index => {
         setfaqs(faqs.map((faq, i) => {

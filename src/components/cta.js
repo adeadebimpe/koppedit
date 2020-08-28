@@ -1,15 +1,34 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Section from './section';
 
 import googlebadge from '../images/googlebadge-white.svg';
 import applebadge from '../images/applestore-white.svg'
 
 const CTA = () => {
+
+    const data = useStaticQuery(graphql`
+    query {
+     allContentfulCta {
+    edges {
+      node {
+        heading
+        body
+      }
+    }
+  }
+}
+
+  
+`);
+
+const { heading, body } = data.allContentfulCta.edges[0].node;
+
     return (
         <Section className="cta">
             <div className="cta__content">
-                <h2>Start Buying and selling now</h2>
-                <p>Take your business everywhere with you an never miss a business opportunity with the Kopped mobile app. Manage order, communicate with customers, upload products to your online store and social media directly from the mobile app.</p>
+                <h2>{heading}</h2>
+                <p>{body}</p>
                {/*  <div className="download">
 								<img src={googlebadge} alt="Google Playstore"/>
 								<img src={applebadge} alt="Apple Playstore"/>

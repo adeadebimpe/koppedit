@@ -23,7 +23,6 @@ const Navigation = () => {
             <NavItem name="How it works" url="#howitworks" />
             <NavItem name="Why Us" url="#whychooseus" />
             <NavItem name="FAQ" url="#faq" />
-           {/*  <NavItem type="button" name="Download App" url="#" /> */}
           </ul>
       </div>
     </nav>
