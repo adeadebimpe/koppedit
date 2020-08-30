@@ -9,7 +9,7 @@ import Col from './flex/col'
 import headerImage from '../images/GADGET.png';
 import arrow from '../images/scrollarrow.svg';
 
-
+import logo from '../images/logo.svg';
 
 const Header = () => {
 	const data = useStaticQuery(graphql`
@@ -36,8 +36,10 @@ const Header = () => {
 				<div className="header__content">
 					<Row>
 						<Col>
+							<div className="logo">
+								<img src={logo} alt="KoppedIt Logo"/>
+							</div>
 							<ReactMarkdown source={heading.heading} escapeHtml={false} />
-							<p>{subHeading}</p>
 							<div className="download">
 								<a href={url}><button className="btn btn-primary">Become a beta tester</button></a>
 							</div>

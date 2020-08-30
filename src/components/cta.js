@@ -36,7 +36,7 @@ const { heading, body } = data.allContentfulCta.edges[0].node;
                /*  <div className="download">
 					<button className="btn btn-bordered">Become a beta tester</button>
 				</div> */}
-                <form action="">
+                <form  action="https://formspree.io/mknqljpw" method="POST">
                     <div className="input__group">
                         <label htmlFor="email">Email Address</label>
                         <input type="email" name="email" />
@@ -44,8 +44,8 @@ const { heading, body } = data.allContentfulCta.edges[0].node;
                     <div className="input__group">
                         <label htmlFor="device">Device OS</label>
                         <select name="device" id="">
-                            <option value="andriod">Andriod</option>
                             <option value="ios">IOS</option>
+                            <option value="andriod">Android</option>
                         </select>
                     </div>
                     <button type="submit" className="btn btn-bordered">Submit</button>

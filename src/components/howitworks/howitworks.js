@@ -37,7 +37,7 @@ const Howitworks = () => {
                         <h2>How it works</h2>
                         <HowItWorksItem image={one} title={data.allContentfulHowItWorksItem.edges[2].node.heading} text={data.allContentfulHowItWorksItem.edges[2].node.body} />
                         <HowItWorksItem image={two} title={data.allContentfulHowItWorksItem.edges[1].node.heading} text={data.allContentfulHowItWorksItem.edges[1].node.body} />
-                        <HowItWorksItem image={three} title={data.allContentfulHowItWorksItem.edges[0].node.heading} text={data.allContentfulHowItWorksItem.edges[2].node.body} />
+                        <HowItWorksItem image={three} title={data.allContentfulHowItWorksItem.edges[0].node.heading} text={data.allContentfulHowItWorksItem.edges[0].node.body} />
                     </Col>
                 </Row>
         </Section>

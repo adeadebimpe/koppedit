@@ -69,6 +69,7 @@ body {
     color: #1f2232;
 }
 
+
 h1,
 h2,
 h3,
@@ -186,45 +187,126 @@ a, button {
 
 /* NAVIGATION STYLE */
 
-nav {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
+.hamburger {
+    position: relative;
+    cursor: pointer;
 
-    padding: 20px 0;
-    z-index: 2;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+
+    &__toggle , &::before , &::after {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #000;   
+        transition: all .2s ease-in-out;
+        
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left:0;
+        right: 0;
+    }
+
+    &::before {
+        top: 10px;
+    }
+
+    &::after {
+        bottom: 10px;
+    }
+    
+
+     &.is-open {
+        .hamburger__toggle {
+            transform: scale(0);
+        }
+        &::before {
+            transform: rotate(135deg);
+            top: 0;
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+            bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+
+        &.is-closed + .nav {
+            display: none;
+        }
+
+        &.is-open + .nav {
+            display: flex;
+            flex-basis: 100%;
+        }
+    }
 }
 
-nav > .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
+nav {
+   
+    padding: 20px 0;
 
-    img {
-        max-width: 200px;
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
     }
 
-    @media screen and (max-width: 1200px) {
-        justify-content: center;
-    }
-
-    ul {
-        display: none;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
 
         @media screen and (min-width: 1200px) {
-            display: flex;  
+            flex-wrap: nowrap;
         }
 
-        li {
-            list-style-type: none;
+        img {
+            max-width: 50px;
+            @media screen and (min-width: 1200px) {
+                max-width: 150px;
+            }
+        }
+    
+        ul {
+           
+            display: flex;
+           flex-direction: column;
+           justify-content: space-between;
 
-            a {
-                color: $text-color;
+           @media screen and (min-width: 1200px) {
+               flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+           }
+    
+            li {
+                list-style-type: none;
                 padding: 10px 30px;
-                text-decoration: none;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    font-weight: 500;
+    
+                    &.button {
+                        background-color: $primary-color;
+                        border-radius: 3px;
+                        padding: 10px 30px;
+                        box-shadow: 0px 10px 30px $background-transparent;
+                        color: #000;
+                    }
+                }
             }
         }
     }
@@ -241,16 +323,24 @@ nav > .container {
 
     @media screen and (min-width: 1200px) {
         min-height: 90vh;
-        padding: 100px 0;
+        padding: 150px 0;
     }
 
     .container {
         min-height: 100%;
     }
 
+    .logo {
+        width: 50%;
+        margin: 0 auto 20px auto;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
     &__content {
         height: 100%;
-        margin: 50px 0;
+        margin: 0px 0;
 
         .row {
             align-items: center;
@@ -273,6 +363,7 @@ nav > .container {
             text-align: center;
             font-size: 30px;
             line-height: 1.5;
+            margin-bottom: 0;
 
             @media screen and (min-width: 1024px){
                 font-size: 42px;
