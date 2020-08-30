@@ -17,6 +17,9 @@ class Navigation extends Component {
   }
 
 	  componentDidMount() {
+      this.setState({
+        width: window.innerWidth
+      });
 		  window.addEventListener("resize", this.updateWindowDimensions());
 	  }
 	  
@@ -37,8 +40,6 @@ class Navigation extends Component {
   
   render() {
     const { screenWidth } = this.state;
-
-    console.log(screenWidth);
     
     const isMobile = screenWidth < 1200;
     
