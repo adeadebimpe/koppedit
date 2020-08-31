@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Nav from '../components/nav/nav';
 import Footer from '../components/footer';
 import Section from '../components/section';
+import SEO from '../components/seo';
 
 const PrivacyPolicy = () => {
     const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const PrivacyPolicy = () => {
       
     return (
        <main className="privacypolicy">
+        <SEO />
         <Nav />
         <header> <h1>Privacy Policy</h1> </header>
         <Section className="privacypolicy__content">

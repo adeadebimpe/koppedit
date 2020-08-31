@@ -1,44 +1,32 @@
-/* import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-function SEO({ description, lang, meta }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            keywords
-            siteUrl
-          }
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+
+function SEO() {
+
+const seo = useStaticQuery(graphql` 
+  query {
+    allContentfulSeo {
+      edges {
+        node {
+          description
+          title
+          keywords
         }
       }
-    `
-  )
-  const metaDescription = description || site.siteMetadata.description
+    }
+  }
+  `)
+  const { title, description, keywords } = seo.allContentfulSeo.edges[0].node
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: "keywords",
-          content: site.siteMetadata.keywords.join(","),
-        },
-      ]}
-    />
+     <Helmet>
+         <title>{title}</title>
+          <link rel="canonical" href="https://koppedit.com" />
+          <meta name="description" content={description} />
+          <meta name="keywords" content={keywords} />
+     </Helmet>
   )
 }
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-export default SEO */
+
+export default SEO

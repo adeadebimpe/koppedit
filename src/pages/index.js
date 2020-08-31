@@ -14,10 +14,12 @@ import '../style/style.scss';
 
 
 import mobileImage from '../images/GADGET.png';
+import SEO from "../components/seo";
 
 
 export default function Home() {
   return <main>
+    <SEO />
     <Navigation />
     <Header />
     <Howitworks />
