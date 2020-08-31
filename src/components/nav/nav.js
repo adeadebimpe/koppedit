@@ -11,7 +11,7 @@ import logo from '../../images/logo.svg'
 
 class Navigation extends Component {
 
-  state = {
+/*   state = {
     screenWidth: null,
     isOpen: false,
   }
@@ -36,12 +36,12 @@ class Navigation extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     })
-  }
+  } */
   
   render() {
-    const { screenWidth } = this.state;
+/*     const { screenWidth } = this.state; */
     
-    const isMobile = screenWidth < 1200;
+/*     const isMobile = screenWidth < 1200; */
     
     return (
       <nav>

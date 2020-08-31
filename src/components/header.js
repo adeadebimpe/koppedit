@@ -9,8 +9,6 @@ import Col from './flex/col'
 import headerImage from '../images/GADGET.png';
 import arrow from '../images/scrollarrow.svg';
 
-import logo from '../images/logo.svg';
-
 const Header = () => {
 	const data = useStaticQuery(graphql`
 	query {
@@ -28,7 +26,7 @@ const Header = () => {
 	  }
 	  `)
 
-	const { heading, subHeading, url } = data.allContentfulHeader.edges[0].node;
+	const { heading, url } = data.allContentfulHeader.edges[0].node;
 
 	return (
 		<header className="header">
