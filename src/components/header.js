@@ -36,9 +36,6 @@ const Header = () => {
 				<div className="header__content">
 					<Row>
 						<Col>
-							<div className="logo">
-								<img src={logo} alt="KoppedIt Logo"/>
-							</div>
 							<ReactMarkdown source={heading.heading} escapeHtml={false} />
 							<div className="download">
 								<a href={url}><button className="btn btn-primary">Become a beta tester</button></a>

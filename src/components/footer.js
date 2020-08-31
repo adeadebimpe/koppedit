@@ -13,16 +13,17 @@ const Footer = () => {
                 <Row>
                     <ColumnFour>
                         <img src={logowhite} alt="Logo White" />
+                        <p className="emailaddress">Contact us: <a href="mailto:support@koppedit.com">support@koppedit.com</a></p>
                     </ColumnFour>
                     <ColumnFour>
-                        <h6>Download</h6>
+                        <h6>Coming soon</h6>
 
                         <ul>
                             <li>
                                 <Link to="/">iOS App</Link>
                             </li>
                             <li>
-                                <Link to="/">Andriod App</Link>
+                                <Link to="/">Android App</Link>
                             </li>
                         </ul>
                     </ColumnFour>
@@ -30,8 +31,7 @@ const Footer = () => {
                         <h6>Resources</h6>
                         <ul>
                             <li><Link to="/">Blog</Link></li>
-                            <li><Link to="/">FAQs</Link></li>
-                            <li><Link to="/">Pricing</Link></li>
+                            <li><Link to="#faq">FAQs</Link></li>
                             <li><Link to="/">Privacy</Link></li>
                         </ul>
                     </ColumnFour>

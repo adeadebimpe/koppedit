@@ -50,11 +50,12 @@ class Navigation extends Component {
       </Helmet>
         <div className="container">
             <a href="#" className="nav__logo">
-              {isMobile ? <img src={favicon} alt="KoppedIt Logo"/> : <img src={logo} alt="KoppedIt Logo"/>}
+           {/*    {isMobile ? <img src={favicon} alt="KoppedIt Logo"/> : <img src={logo} alt="KoppedIt Logo"/>} */}
+              <img src={logo} alt="KoppedIt Logo"/>
             </a>
-            <div className={`hamburger ${this.state.isOpen ? "is-open" : "is-closed"}`} onClick={this.handleMenuToggle}>
+           {/*  <div className={`hamburger ${this.state.isOpen ? "is-open" : "is-closed"}`} onClick={this.handleMenuToggle}>
               <span className="hamburger__toggle"></span>
-            </div>
+            </div> */}
             <ul className="nav">
               <NavItem name="How it works" url="#howitworks" />
               <NavItem name="Why Us" url="#whychooseus" />
