@@ -30,9 +30,8 @@ const Footer = () => {
                     <ColumnFour>
                         <h6>Resources</h6>
                         <ul>
-                            <li><Link to="/">Blog</Link></li>
                             <li><Link to="#faq">FAQs</Link></li>
-                            <li><Link to="/">Privacy</Link></li>
+                            <li><Link to="/privacypolicy">Privacy Policy</Link></li>
                         </ul>
                     </ColumnFour>
                 </Row>

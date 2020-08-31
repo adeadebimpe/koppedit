@@ -6,6 +6,9 @@ import Footer from '../components/footer';
 import Section from '../components/section';
 import SEO from '../components/seo';
 
+import '../style/normalize.scss';
+import '../style/style.scss';
+
 const PrivacyPolicy = () => {
     const data = useStaticQuery(graphql`
 	query {
