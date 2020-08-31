@@ -755,3 +755,18 @@ select option {
   color: #fff;
   text-decoration: none;
 }
+
+.privacypolicy header {
+  background-color: rgba(82, 169, 220, 0.05);
+}
+.privacypolicy header h1 {
+  margin: 0;
+  padding: 100px 0;
+  text-align: center;
+}
+.privacypolicy__content {
+  margin: 70px 0;
+}
+.privacypolicy__content h1, .privacypolicy__content h2, .privacypolicy__content h3, .privacypolicy__content h4, .privacypolicy__content h5, .privacypolicy__content h6 {
+  margin: 15px 0;
+}

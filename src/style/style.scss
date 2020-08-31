@@ -833,3 +833,25 @@ select option {
         text-decoration: none;
     }
 }
+
+.privacypolicy {
+    header {
+        background-color: $background-transparent;
+
+        h1 {
+            margin: 0;
+            padding: 100px 0;
+            text-align: center;
+        }
+       
+    }
+
+    &__content {
+        margin: 70px 0;
+            
+        h1, h2, h3, h4, h5, h6{
+            margin: 15px 0;
+        }
+    }
+
+}

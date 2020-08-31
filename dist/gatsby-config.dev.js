@@ -22,8 +22,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
-    description: "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
+    title: "Koppedit",
+    description: "Easiest way to buy and sell used gadgets",
     author: "@gatsbyjs"
   },
   plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-sass", {
@@ -32,8 +32,5 @@ module.exports = {
       spaceId: process.env.CONTENTFUL_SPACE_ID,
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
     }
-  } // this (optional) plugin enables Progressive Web App + Offline functionality
-  // To learn more, visit: https://gatsby.dev/offline
-  // `gatsby-plugin-offline`,
-  ]
+  }]
 };
