@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 
 import NavItem from './navitem';
@@ -49,11 +50,11 @@ class Navigation extends Component {
         <link rel="icon" href={favicon} />
       </Helmet>
         <div className="container">
-            <a href="#" className="nav__logo">
+            <Link to="/" className="nav__logo">
            {/*    {isMobile ? <img src={favicon} alt="KoppedIt Logo"/> : <img src={logo} alt="KoppedIt Logo"/>} */}
               <img src={logo} alt="KoppedIt Logo"/>
-            </a>
-           {/*  <div className={`hamburger ${this.state.isOpen ? "is-open" : "is-closed"}`} onClick={this.handleMenuToggle}>
+            </Link>
+                    {/*  <div className={`hamburger ${this.state.isOpen ? "is-open" : "is-closed"}`} onClick={this.handleMenuToggle}>
               <span className="hamburger__toggle"></span>
             </div> */}
             <ul className="nav">
