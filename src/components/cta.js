@@ -2,9 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Section from './section';
 
-import googlebadge from '../images/googlebadge-white.svg';
-import applebadge from '../images/applestore-white.svg'
-
 const CTA = () => {
 
     const data = useStaticQuery(graphql`

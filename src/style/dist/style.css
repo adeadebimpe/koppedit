@@ -258,11 +258,11 @@ nav .container {
   }
 }
 nav .container img {
-  max-width: 150px;
+  max-width: 200px;
 }
 @media screen and (max-width: 1199px) {
   nav .container img {
-    margin-top: 30px;
+    margin: 30px 0;
   }
 }
 nav .container ul {
@@ -311,15 +311,6 @@ nav .container ul li a.button {
 .header .container {
   min-height: 100%;
 }
-.header .logo {
-  width: 50%;
-  margin: 0 auto 20px auto;
-}
-@media screen and (min-width: 1200px) {
-  .header .logo {
-    display: none;
-  }
-}
 .header__content {
   height: 100%;
   margin: 0px 0;
@@ -342,23 +333,19 @@ nav .container ul li a.button {
 }
 .header__content h1 {
   text-align: center;
-  font-size: 30px;
   line-height: 1.5;
-  margin-bottom: 0;
-}
-@media screen and (min-width: 1024px) {
-  .header__content h1 {
-    font-size: 42px;
-    line-height: 1.5;
-  }
+  margin: 70px 0 50px 0;
 }
 @media screen and (min-width: 1200px) {
   .header__content h1, .header__content p {
-    max-width: 750px;
+    max-width: 500px;
     text-align: left;
   }
   .header__content p {
     display: block;
+  }
+  .header__content h1 {
+    margin: 20px 0;
   }
 }
 .header__content h1 > span {
@@ -376,11 +363,6 @@ nav .container ul li a.button {
     width: 100%;
   }
 }
-@media screen and (max-width: 1200px) {
-  .header__content button {
-    margin-top: 20px;
-  }
-}
 
 /* GOOGLE PLAY BUTTON */
 .download {
@@ -388,7 +370,6 @@ nav .container ul li a.button {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
 }
 .download img {
   max-width: 150px;
@@ -400,7 +381,6 @@ nav .container ul li a.button {
 @media screen and (min-width: 1200px) {
   .download {
     justify-content: flex-start;
-    margin-top: 30px;
   }
   .download img {
     max-width: 200px;
@@ -660,7 +640,7 @@ footer ul li > a {
 .arrow {
   max-width: 30px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 70px;
   animation: bounce 1s infinite alternate;
   -webkit-animation: bounce 1s infinite alternate;
 }
