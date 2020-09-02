@@ -550,10 +550,11 @@ nav {
 
         .faq__question {
             font-size: 18px;
-            padding: 20px 0;
             font-weight: 500;
             position: relative;
             transition: all 0.4s ease;
+            line-height: 1.5;
+            padding-right: 20px;
 
             &::after {
                 content: " ";
@@ -577,6 +578,26 @@ nav {
             max-height: 0;
             overflow-y: hidden;
             transition: all 0.4s ease;
+
+            h1, h2, h3, h4, h5, h6{
+                margin-bottom: 10px;
+            }
+
+            p > strong {
+                font-weight: 600;
+                margin: 20px 0 15px 0;
+                display: block;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            ol > li {
+                list-style-type: disc;
+                margin-bottom: 10px;
+            }
+            
         }
 
         &.open {
