@@ -555,6 +555,14 @@ nav {
             transition: all 0.4s ease;
             line-height: 1.5;
             padding-right: 20px;
+            width: 100%;
+            text-align: left;
+            border: 0;
+            background-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
 
             &::after {
                 content: " ";
