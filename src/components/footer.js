@@ -13,7 +13,7 @@ const Footer = () => {
                 <Row>
                     <ColumnFour>
                        <Link to="/"> <img src={logowhite} alt="Logo White" /></Link>
-                        <p className="emailaddress">Contact us: <a href="mailto:support@koppedit.com">info@koppedit.com</a></p>
+                        <p className="emailaddress">Contact us: <a href="mailto:info@koppedit.com">info@koppedit.com</a></p>
                     </ColumnFour>
                     <ColumnFour>
                         <h6>Coming soon</h6>
