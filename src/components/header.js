@@ -36,7 +36,7 @@ const Header = () => {
 						<Col>
 							<ReactMarkdown source={heading.heading} escapeHtml={false} />
 							<div className="download">
-								<a href={url}><button className="btn btn-primary">Become a beta tester</button></a>
+								<a href="#cta"><button className="btn btn-primary">Become a beta tester</button></a>
 							</div>
 						</Col>
 						<Col>
